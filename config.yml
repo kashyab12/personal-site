@@ -1,8 +1,7 @@
 baseURL: https://kashyab.com/
-title: Kashyab J. A.
+title: Kashyab J. Ambarani
 paginate: 5
 theme: charlolamode
-
 
 
 menu:
@@ -17,19 +16,9 @@ menu:
           url: projects
           weight: 15
 
-     # - name: Categories
-        #   url: categories/
-        #   weight: 10
-        # - name: new Tab
-        #   url: mewtab/
-        #   weight: defines order of tabs
-   
-
 
 params:
-    author: Kashyab J. A.
-
-
+    author: Kashyab J. Ambarani
     defaultTheme: auto
     # disableThemeToggle: true
     ShowShareButtons: true
@@ -41,31 +30,25 @@ params:
 
     profileMode:
         enabled: true
-        title: Kashyab J. A.
+        title: Hi there, I'm Kashyab!
         description: |
+          22 year old software engineer curious about technology.
 
-          Hello, I am Joe.
-           I am a software developer. 
-        
-
-          This is a minimalistic theme template for websites.
-        imageUrl: "/images/profile.png"
+          I explore an array of problems and share my thoughts here.
+        imageUrl: "/images/kashyab-web-pic.png"
         imageTitle: my image
-        # imageWidth: 120
-        # imageHeight: 120
-        buttons:
-            - name: Don't click me
-              url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+        imageWidth: 300
+        imageHeight: 300
     mainSections:
       - articles
 
     socialIcons:
-        - name: buymeacoffee
-          url: "https://ko-fi.com/heycharlola"
         - name: github
-          url: "https://github.com/charlola"
+          url: "https://github.com/kashyab12"
         - name: linkedin
-          url: "https://www.linkedin.com/in/heycharlola/"
+          url: "https://www.linkedin.com/in/kashyab-ambarani/"
+        - name: email
+          url: "mailto:iamkashyab@gmail.com?subject=Subject\ Here!"
 
       # add more social icons. find more in svg.html file
       # - name: youtube
@@ -93,4 +76,3 @@ pygmentsUseClasses: true
 
 minify:
     disableXML: true
-
