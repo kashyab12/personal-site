@@ -6,8 +6,8 @@ theme: charlolamode
 
 menu:
     main:
-        - name: Contact
-          url: contact/
+        - name: About Me
+          url: aboutme/
           weight: 30
         - name: Articles
           url: articles/
