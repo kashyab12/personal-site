@@ -50,15 +50,6 @@ params:
         - name: email
           url: "mailto:iamkashyab@gmail.com?subject=Subject\ Here!"
 
-      # add more social icons. find more in svg.html file
-      # - name: youtube
-      #   url: yoururl
-      # - name: twitter
-      #   url: yoururl
-      # - name: facebook
-      #   url: yoururl
-
-
     # change favicon in images folder (icon for web tab)
     assets:
           favicon: "/images/favicon.ico"
@@ -68,11 +59,11 @@ params:
           safari_pinned_tab: "/images/apple-touch-icon.png"
 
 
-
 enableInlineShortcodes: true
 enableRobotsTXT: true
 enableEmoji: true
 pygmentsUseClasses: true
+
 
 minify:
     disableXML: true
