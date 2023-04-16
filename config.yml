@@ -37,8 +37,8 @@ params:
           I explore an array of problems and share my thoughts here.
         imageUrl: "/images/kashyab-web-pic.png"
         imageTitle: my image
-        imageWidth: 300
-        imageHeight: 300
+        imageWidth: 250
+        imageHeight: 250
     mainSections:
       - articles
 
