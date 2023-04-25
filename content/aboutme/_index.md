@@ -9,4 +9,4 @@ I'm a computer science and math graduate who loves learning about the world. I c
 For enquiries or longer messages, please [email me](mailto:iamkashyab@gmail.com).
 
 #### LinkedIn
-If you have a short message or question, drop a message via [LinkedIn](https://www.linkedin.com/in/heycharlola/).
+If you have a short message or question, drop a message via [LinkedIn](https://www.linkedin.com/in/kashyab-ambarani/).
