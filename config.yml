@@ -9,8 +9,8 @@ menu:
         - name: About Me
           url: aboutme/
           weight: 30
-        - name: Articles
-          url: articles/
+        - name: Thoughts
+          url: thoughts/
           weight: 20
         - name: Projects
           url: projects
@@ -30,11 +30,11 @@ params:
 
     profileMode:
         enabled: true
-        title: Hi there, I'm Kashyab!
+        title: Hey, I'm Kashyab
         description: |
-          22 year old software engineer curious about technology.
+          23 year old engineer.
 
-          I explore an array of problems and share my thoughts here.
+          I build stuff and share some of my thoughts here!
         imageUrl: "/images/kashyab-web-pic.png"
         imageTitle: my image
         imageWidth: 250
@@ -45,6 +45,10 @@ params:
     socialIcons:
         - name: github
           url: "https://github.com/kashyab12"
+        - name: youtube
+          url: "https://youtube.com/@kashyabj"
+        - name: twitter
+          url: "https://twitter.com/kashyabja"
         - name: linkedin
           url: "https://www.linkedin.com/in/kashyab-ambarani/"
         - name: email
