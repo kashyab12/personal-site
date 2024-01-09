@@ -12,3 +12,5 @@ image: "./project-img/books.png"
 
 #### Dec 30th
 I've been delving deeper into computer architecture for a couple months and am really fascinated by the abstractions in this space.
+#### Jan 9th
+Done with first 2 chapters i.e. a general intro and combinational logic. Looked over the concept of a tristate buffer which was something new for me. Onto sequential logic now, and capacitors!
