@@ -9,9 +9,6 @@ menu:
         - name: About Me
           url: aboutme/
           weight: 30
-        - name: Thoughts
-          url: thoughts/
-          weight: 20
         - name: Projects
           url: projects
           weight: 15
