@@ -42,8 +42,6 @@ params:
     socialIcons:
         - name: github
           url: "https://github.com/kashyab12"
-        - name: youtube
-          url: "https://youtube.com/@kashyabj"
         - name: twitter
           url: "https://twitter.com/kashyabja"
         - name: linkedin
