@@ -5,5 +5,5 @@ description: Parses region of interest (ROI), applies a mask over the ROI, remov
 type: page
 topic: project
 link: "https://github.com/kashyab12/liver-segmentation-validation"
-image: "../imgs/ct.jpg"
+image: "./imgs/ct.jpg"
 ---
