@@ -5,5 +5,5 @@ description: Prioritize the important things in life through AI powered auto-pri
 type: page
 topic: project
 link: "https://habere-peach.vercel.app/"
-image: "./project-img/habere.jpeg"
+image: "../../static/images/habere.jpeg"
 ---

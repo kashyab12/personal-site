@@ -5,5 +5,5 @@ description: Visualization program that allows users to create and modify enviro
 type: page
 topic: project
 link: "https://github.com/kashyab12/OaKviz"
-image: "./project-img/oakviz.png"
+image: "../../static/images/oakviz.jpeg"
 ---
