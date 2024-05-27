@@ -1,43 +1,40 @@
 baseURL: https://kashyab.com/
-title: Kashyab J. Ambarani
+title: Kashyab Ambarani
 paginate: 5
 theme: charlolamode
-
+enableInlineShortcodes: true
+enableRobotsTXT: true
+enableEmoji: true
+pygmentsUseClasses: true
 
 menu:
     main:
         - name: About Me
           url: aboutme/
           weight: 30
-        - name: Projects
-          url: projects
-          weight: 15
+        # - name: Projects
+        #   url: projects
+        #   weight: 15
 
 
 params:
-    author: Kashyab J. Ambarani
+    env: production
+    # author: Kashyab J. Ambarani
     defaultTheme: auto
+    disableSpecial1stPost: true
     # disableThemeToggle: true
     ShowShareButtons: true
-    ShowReadingTime: true
+    ShowReadingTime: false
     displayFullLangName: true
     ShowBreadCrumbs: true
     ShowCodeCopyButtons: true
-    ShowToc: true
-
-    profileMode:
-        enabled: true
-        title: Hey, I'm Kashyab
-        description: |
-          23 year old engineer.
-
-          Passionate about tech, and share projects here!
-        imageUrl: "/images/kashyab-web-pic.png"
-        imageTitle: my image
-        imageWidth: 250
-        imageHeight: 250
+    ShowToc: false
     mainSections:
-      - articles
+      - projects
+    profileMode:
+        enabled: false
+    # homeInfoParams:
+    #     enabled: true
 
     socialIcons:
         - name: github
@@ -56,12 +53,6 @@ params:
           favicon32x32: "/images/favicon-32x32.png"
           apple_touch_icon: "/images/apple-touch-icon.png"
           safari_pinned_tab: "/images/apple-touch-icon.png"
-
-
-enableInlineShortcodes: true
-enableRobotsTXT: true
-enableEmoji: true
-pygmentsUseClasses: true
 
 
 minify:

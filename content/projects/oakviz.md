@@ -2,8 +2,9 @@
 title: OaK.viz
 dateMonthYear: March 2021
 description: Visualization program that allows users to create and modify environments of their liking.
-type: page
+type: projects
 topic: project
 link: "https://github.com/kashyab12/OaKviz"
-image: "./imgs/oakviz.png"
+image: "/images/projects/oakviz.png"
+weight: 4
 ---
