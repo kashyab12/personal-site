@@ -18,7 +18,6 @@ menu:
 
 
 params:
-    env: production
     # author: Kashyab J. Ambarani
     defaultTheme: auto
     disableSpecial1stPost: true
@@ -54,9 +53,8 @@ params:
           apple_touch_icon: "/images/apple-touch-icon.png"
           safari_pinned_tab: "/images/apple-touch-icon.png"
 
-    analytics:
-      google:
-        SiteVerificationTag: "G-WZ8S1TE8QB"
+    googleAnalyticsID: "G-WZ8S1TE8QB"
+
 
 
 minify:
