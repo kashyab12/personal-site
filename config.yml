@@ -54,6 +54,10 @@ params:
           apple_touch_icon: "/images/apple-touch-icon.png"
           safari_pinned_tab: "/images/apple-touch-icon.png"
 
+    analytics:
+      google:
+        SiteVerificationTag: "G-WZ8S1TE8QB"
+
 
 minify:
     disableXML: true
