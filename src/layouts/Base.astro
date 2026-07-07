@@ -1,0 +1,61 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Kashyab Ambarani — engineer, builder, tinkerer.' } = Astro.props;
+const { pathname } = Astro.url;
+
+const navItems = [
+  { href: '/blog', label: 'Blog' },
+  { href: '/projects', label: 'Projects' },
+];
+
+const isActive = (href: string) => pathname === href || pathname.startsWith(href + '/');
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/images/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <link rel="canonical" href={new URL(pathname, Astro.site)} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="/">Kashyab Ambarani</a>
+      <nav>
+        {
+          navItems.map((item) => (
+            <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>
+              {item.label}
+            </a>
+          ))
+        }
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="inner">
+        <span>© {new Date().getFullYear()} Kashyab Ambarani</span>
+        <span class="links">
+          <a href="https://github.com/kashyab12">GitHub</a>
+          <a href="https://x.com/kashyab">X</a>
+          <a href="https://www.linkedin.com/in/kashyab-ambarani/">LinkedIn</a>
+          <a href="mailto:iamkashyab@gmail.com">Email</a>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>

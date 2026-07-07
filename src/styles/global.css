@@ -1,0 +1,301 @@
+@import '@fontsource-variable/newsreader';
+
+:root {
+  --bg: #2b2116;
+  --bg-raised: #372b1e;
+  --ink: #ece1cd;
+  --ink-soft: #b3a48c;
+  --line: #4a3c2c;
+  --accent: #c2a175;
+  --accent-deep: #d8bd92;
+  --serif: 'Newsreader Variable', Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.6;
+  /* Newsreader's space glyph is very narrow; widen slightly for readability */
+  word-spacing: 0.08em;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1.25rem 4rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+a {
+  color: var(--accent-deep);
+  text-decoration-color: var(--line);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 120ms ease;
+}
+
+a:hover {
+  text-decoration-color: var(--accent);
+}
+
+::selection {
+  background: #5a4930;
+}
+
+.section-title {
+  font-size: 1.35rem;
+  margin: 0 0 0.75rem;
+}
+
+.meta {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+/* --- header / footer --- */
+
+.site-header {
+  max-width: 44rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-header .wordmark {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 550;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.site-header nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.site-header nav a {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: var(--ink-soft);
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current='page'] {
+  color: var(--accent-deep);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 3rem;
+}
+
+.site-footer .inner {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.site-footer .links {
+  display: flex;
+  gap: 1rem;
+}
+
+/* --- blog / list items --- */
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-list li {
+  border-bottom: 1px solid var(--line);
+}
+
+.post-list li:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.post-list a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0.25rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.post-list a:hover .post-title {
+  color: var(--accent-deep);
+}
+
+.post-list .post-title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 480;
+}
+
+.post-list time {
+  flex-shrink: 0;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- prose (blog post body) --- */
+
+.prose h2 {
+  font-size: 1.45rem;
+  margin: 2.2rem 0 0.6rem;
+}
+
+.prose h3 {
+  font-size: 1.15rem;
+  margin: 1.8rem 0 0.5rem;
+}
+
+.prose p {
+  margin: 0 0 1.1rem;
+}
+
+.prose img {
+  display: block;
+  max-width: min(100%, 30rem);
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  margin: 1rem auto;
+}
+
+.prose blockquote {
+  margin: 1.25rem 0;
+  padding: 0.15rem 1.1rem;
+  border-left: 3px solid var(--accent);
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.prose code {
+  font-size: 0.82em;
+  background: #443622;
+  padding: 0.12em 0.35em;
+  border-radius: 4px;
+}
+
+.prose pre {
+  /* override shiki's inline theme background */
+  background: #1e160e !important;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.prose pre code {
+  background: none;
+  padding: 0;
+}
+
+/* --- projects --- */
+
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-list li {
+  border-bottom: 1px solid var(--line);
+}
+
+.project-list li:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.project-list a {
+  display: block;
+  padding: 1.35rem 0.25rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.project-list .project-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.project-list h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  transition: color 120ms ease;
+}
+
+.project-list .arrow {
+  opacity: 0;
+  transition: opacity 120ms ease;
+  color: var(--accent);
+}
+
+.project-list a:hover h3 {
+  color: var(--accent-deep);
+}
+
+.project-list a:hover .arrow {
+  opacity: 1;
+}
+
+.project-list .meta {
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.project-list p {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  max-width: 36rem;
+}

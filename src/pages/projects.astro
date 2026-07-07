@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.weight - b.data.weight);
+---
+
+<Base title="Projects — Kashyab Ambarani" description="Projects built by Kashyab Ambarani.">
+  <h1 class="page-title">Projects</h1>
+  <ul class="project-list">
+    {
+      projects.map((project) => (
+        <li>
+          <a href={project.data.link}>
+            <span class="project-head">
+              <h3>{project.data.title}<span class="arrow"> ↗</span></h3>
+              <span class="meta">{project.data.date}</span>
+            </span>
+            <p>{project.data.description}</p>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Base>
+
+<style>
+  .page-title {
+    font-size: 2rem;
+    margin: 1.5rem 0 0.75rem;
+  }
+</style>

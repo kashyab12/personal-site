@@ -1,0 +1,115 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import portrait from '../assets/kashyab.jpg';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 5);
+
+const dateFmt = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+---
+
+<Base title="Kashyab Ambarani">
+  <section class="hero">
+    <div class="hero-text">
+      <p>
+        These days I'm building and growing <a href="https://verbiflow.com">Verbiflow (YC W25)</a>.
+      </p>
+      <p>
+        Want to talk? <a href="mailto:iamkashyab@gmail.com">Email</a> is the fastest way to reach me.
+      </p>
+    </div>
+    <Image
+      class="hero-photo"
+      src={portrait}
+      alt="Kashyab at the University of Florida campus"
+      widths={[400, 640, 800]}
+      sizes="(max-width: 40rem) 100vw, 320px"
+      loading="eager"
+      fetchpriority="high"
+    />
+  </section>
+
+  <section class="home-section">
+    <h2 class="section-title">Writing</h2>
+    {
+      posts.length > 0 ? (
+        <ul class="post-list">
+          {posts.map((post) => (
+            <li>
+              <a href={`/blog/${post.id}`}>
+                <span class="post-title">{post.data.title}</span>
+                <time datetime={post.data.date.toISOString()}>{dateFmt.format(post.data.date)}</time>
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="meta">Nothing here yet — first post coming soon.</p>
+      )
+    }
+    <p class="see-all"><a href="/blog">All posts →</a></p>
+  </section>
+
+  <section class="home-section">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-blurb">Things I've built for fun.</p>
+    <p class="see-all"><a href="/projects">See projects →</a></p>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem 0 2.5rem;
+  }
+
+  .hero-text p {
+    margin: 0 0 0.9rem;
+    font-size: 1.2rem;
+    color: var(--ink-soft);
+  }
+
+  .hero-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .hero-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.5);
+    filter: sepia(0.1) saturate(1.02);
+  }
+
+  .home-section {
+    padding: 1.5rem 0;
+  }
+
+  .section-blurb {
+    margin: 0;
+    color: var(--ink-soft);
+  }
+
+  .see-all {
+    margin: 0.9rem 0 0;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 40rem) {
+    .hero {
+      grid-template-columns: 1fr;
+      padding-top: 0.5rem;
+    }
+
+    .hero-photo {
+      order: -1;
+    }
+  }
+</style>
